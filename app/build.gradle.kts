@@ -1,4 +1,5 @@
 plugins {
+    application
     java
     alias(libs.plugins.shadow)
 }
@@ -21,12 +22,25 @@ java {
     }
 }
 
+application {
+    mainClass = "com.github.navust.gtcli.GtCli"
+    applicationName = "gt-cli"
+}
+
 tasks {
     shadowJar {
-        archiveBaseName = "gt-cli"
-        archiveClassifier = null
+        archiveFileName = "gt-cli.jar"
+        minimize()
         manifest {
             attributes["Main-Class"] = "com.github.navust.gtcli.GtCli"
         }
+    }
+
+    shadowDistTar {
+        archiveFileName = "gt-cli.tar"
+    }
+
+    shadowDistZip {
+        archiveFileName = "gt-cli.zip"
     }
 }

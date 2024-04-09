@@ -1,5 +1,6 @@
 package com.github.navust.gtcli;
 
+import com.github.navust.gtcli.subcommand.Codes;
 import com.github.navust.gtcli.subcommand.Redeem;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
@@ -12,6 +13,7 @@ import java.util.concurrent.Callable;
         version = "gt-cli 1.0",
         description = "A set of CLI utilities for Guardian Tales.",
         subcommands = {
+                Codes.class,
                 Redeem.class
         }
 )

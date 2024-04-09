@@ -10,7 +10,7 @@ import java.util.concurrent.Callable;
 @Command(
         name = "gt-cli",
         mixinStandardHelpOptions = true,
-        version = "gt-cli 1.0",
+        version = "gt-cli 1.0.0",
         description = "A set of CLI utilities for Guardian Tales.",
         subcommands = {
                 Codes.class,
